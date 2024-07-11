@@ -1,0 +1,14 @@
+<div class="login" [formGroup]="loginForm" autocomplete="off">
+    <div>
+        <h3>Login</h3>
+    </div>
+    <div>
+        <input class="form" type="text" placeholder="Username" autocomplete="off" formControlName="userName">
+    </div>
+    <div>
+        <input class="form" type="password" placeholder="Password" autocomplete="new-password" formControlName="password">
+    </div>
+    <div>
+        <button class="login-btn" (click)="submitForm()">Login</button>
+    </div>
+</div>

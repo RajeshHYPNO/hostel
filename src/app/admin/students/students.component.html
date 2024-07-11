@@ -1,0 +1,44 @@
+<div class="dashboard">
+    <div class="search-container row">
+        <div class="search col-3">
+            <div class="row">
+                <input type="text" class="search-input col-6" placeholder="Search Ticket ID...">
+                <div class="search-button-container col-6">
+                    <img src="../../../assets/icons/serach_icon.png" width="20px">
+                    <button class="search-button">
+                        Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-container row">
+        <table class="col-12">
+            <thead class="table-header">
+                <tr>
+                    <th>S.No</th>
+                    <th>Student ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Contact Number</th>
+                    <th>Hostel ID</th>
+                    <th>Joined Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="table-body">
+                <tr *ngFor="let data of studentsList">
+                    <td>{{data.sno}}</td>
+                    <td>{{data.studentId}}</td>
+                    <td>{{data.firstName}}</td>
+                    <td>{{data.lastName}}</td>
+                    <td>{{data.contactNumber}}</td>
+                    <td>{{data.hostelId}}</td>
+                    <td>{{data.joinedDate}}</td>
+                    <td>
+                        <button class="view-button btn btn-primary">Edit</button>
+                        <button class="view-button btn btn-danger">Delete</button>
+                    </td>
+            </tbody>
+        </table>
+    </div>
+</div>
